@@ -8,11 +8,12 @@
 </head>
 <body>
 
+<% if alert.count > 0 || notice.count > 0 %>
 <div class="container">
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
-
 </div>
+<% end %>
 
 <div class="container">
 	<%= yield %>

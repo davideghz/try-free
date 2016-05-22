@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  root 'static_pages#home'
   get 'lessons/index'
-
   get 'lessons/show'
 
-  root 'static_pages#home'
+  devise_for :users
 
   resources :topics, only: [:index, :show, :new, :create]
 
