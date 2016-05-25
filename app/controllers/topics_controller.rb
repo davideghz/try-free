@@ -11,5 +11,12 @@ class TopicsController < ApplicationController
   end
 
   def create
+
+  end
+
+  private
+
+  def topics_params
+    params.require(:topic).permit()
   end
 end

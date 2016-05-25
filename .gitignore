@@ -35,3 +35,17 @@
 # Gradle:
 .idea/gradle.xml
 .idea/libraries
+
+# Test-pages:
+/app/controllers/test_controllers_controller.rb
+/app/assets/javascripts/test_controllers.coffee
+/app/assets/javascripts/test_controllers.coffee
+/app/helpers/test_controllers_helper.rb
+/app/assets/stylesheets/scaffolds.scss
+/app/assets/stylesheets/test_controllers.scss
+/app/models/test_controller.rb
+/app/views/test_controllers/
+/db/migrate/20160525114209_create_test_controllers.rb
+/test/controllers/test_controllers_controller_test.rb
+/test/fixtures/test_controllers.yml
+/test/models/test_controller_test.rb
