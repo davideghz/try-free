@@ -4,10 +4,9 @@ Rails.application.routes.draw do
   get 'lessons/index'
   get 'lessons/show'
 
-  devise_for :users
-
   resources :topics, only: [:index, :show, :new, :create]
-
   resources :lessons, only: [:index, :show]
+
+  devise_for :users
 
 end
