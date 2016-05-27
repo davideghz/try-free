@@ -1,4 +1,4 @@
 class Topic < ActiveRecord::Base
   has_many :lessons
-  belongs_to :user
+  has_many :users, through: :lessons
 end
