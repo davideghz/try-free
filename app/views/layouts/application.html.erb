@@ -14,8 +14,7 @@
     <%= render 'layouts/sidebar' %>
     <main id="page-wrapper6">
       <div class="container-fluid">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+        <%= render 'layouts/flashmessages' %>
         <%= yield %>
       </div>
     </main>

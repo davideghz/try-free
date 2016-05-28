@@ -26,6 +26,7 @@ body{
   margin-left: -250px;
   overflow-y: auto;
   padding: 0;
+  padding-top: 25px;
   position: fixed;
   top: 50px;
   width: 0;
@@ -96,6 +97,7 @@ body{
   width: 100%;
   position: absolute;
   padding: 15px;
+  padding-top: 60px;
 }
 #wrapper.toggled #page-wrapper6 {
   position: absolute;
@@ -110,6 +112,7 @@ body{
   }
   #page-wrapper6 {
     padding: 20px;
+    padding-top: 60px;
     position: relative;
   }
   #wrapper.toggled #page-wrapper6 {
