@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :lessons
   has_many :topics, through: :lessons
+
+  has_many :topics
+  has_many :lessons, through: :topics
+
 end
