@@ -1,3 +1,11 @@
-<p>
-  <%= topic.name %>
-</p>
+<div class="col-xs-12 col-sm-6 col-md-4">
+  <div class="thumbnail element">
+    <div class="caption">
+      <h3><%= topic.name %></h3>
+    </div>
+    <div class="caption card-meta">
+      <span><i class="glyphicon glyphicon-fire"></i> <%= rand(5..30) %></span>
+      <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
+    </div>
+  </div>
+</div>

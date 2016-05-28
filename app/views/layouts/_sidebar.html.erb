@@ -14,7 +14,7 @@
       </li>
 
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-tags"></i> Products <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-tags"></i> Categories <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><a href="/">Books</a></li>
           <li><a href="/">Leaflets</a></li>
@@ -27,12 +27,15 @@
       </li>
 
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> Profile <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> User menu <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="/"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
-          <li><a href="/"><i class="glyphicon glyphicon-plus"></i> Account</a></li>
-          <li><a href="/"><i class="glyphicon glyphicon-cog"></i> Settings</a></li>
-          <li><a href="/"><i class="glyphicon glyphicon-comment"></i> Notifications</a></li>
+
+          <li><%= link_to('<i class="glyphicon glyphicon-user"></i> Edit Profile'.html_safe, edit_user_registration_path) %></li>
+
+          <li><%= link_to('<i class="glyphicon glyphicon-plus"></i> Create new topic'.html_safe, new_topic_path) %></li>
+
+          <li><%= link_to('<i class="glyphicon glyphicon-th-large"></i> My topics'.html_safe, topics_path) %></li>
+
         </ul>
       </li>
     </ul>

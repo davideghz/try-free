@@ -237,7 +237,6 @@ body{
   border:1px solid rgba(0, 0, 0, 0.075);
   margin-bottom:25px;
   color:#727272 !important;
-  font-size:13px;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
@@ -282,9 +281,94 @@ body{
 
 .form-btn:hover{
   opacity: 0.8;
-  color: white;
 }
 
 .form-btn:active{
+  opacity: 1;
+}
+
+/* CARDS */
+
+.thumbnail {
+  border-radius: 0px;
+}
+
+.card {
+  -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+}
+
+.title {
+  padding-top: 1px;
+  padding-bottom: 5px;
+  background: #000000;
+  opacity: 0.3;
+  margin: 0 auto;
+  margin-top: -62px;
+  text-align:center;
+  position: relative;
+  color: #ffffff;
+}
+
+.card-meta {
+  border-top: 1px solid #e6e6e6;
+}
+
+.element{
+  width: 100%;
+  background:#f8f8f8;
+  border:1px solid rgba(0, 0, 0, 0.075);
+  color:#727272 !important;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.element:hover{
+  border:1px solid #8BC3A3;
+}
+
+.element:focus{
+  color: white;
+  outline: none;
+  border:1px solid #8BC3A3;
+}
+
+/* ADD ELEMENT BUTTON */
+
+.element-btn{
+  height: 120px;
+  line-height: 120px;
+  color: #ffffff;
+  padding: 13px;
+  display: block;
+  background:#8BC3A3;
+  border:none;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin:auto;
+  -webkit-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+}
+
+.element-btn:hover{
+  opacity: 0.8;
+}
+
+.element-btn:active{
   opacity: 1;
 }
