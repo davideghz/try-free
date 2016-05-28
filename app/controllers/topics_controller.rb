@@ -1,21 +1,26 @@
 class TopicsController < ApplicationController
 
   def index
-    @topics = Topic.all
+    if user_signed_in?
+      @topics = current_user.topics
+    else
+      flash[:danger] = "You didn't create any Topic yet!"
+      redirect_to root_path
+    end
   end
 
   def show
   end
 
   def new
-    @topic = Topic.new
+    @topic = current_user.topics.build if current_user
   end
 
   def edit
   end
 
   def create
-    @topic = Topic.new(topic_params)
+    @topic = current_user.topics.build(topic_params)
     if @topic.save
       flash[:success] = "Topic created"
       redirect_to topics_path
