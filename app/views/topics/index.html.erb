@@ -1,11 +1,9 @@
 <div class="row">
   <%= render @topics %>
-
-  <%= link_to(new_topic_path) do %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="element-btn">
-        <h3><i class="glyphicon glyphicon-plus"></i> Create new topic</h3>
-      </div>
-    </div>
-  <% end %>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <p><i class="glyphicon glyphicon-fire"></i> = number of people who participated to all lessons of the topic</p>
+    <p><i class="glyphicon glyphicon-bookmark"></i> = number of lessons of the topic</p>
+  </div>
 </div>
