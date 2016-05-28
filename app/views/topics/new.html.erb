@@ -1,15 +1,20 @@
-<%= form_for([@topic]) do |f| %>
-    <%= f.label :name, "Topic title" %>
-    <%= f.text_field :name, class: 'form-control' %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
 
-    <%= f.label :country, "Country" %>
-    <%= f.text_field :country, class: 'form-control' %>
+    <h1>Create Topic</h1>
 
-    <%= f.label :city, "City" %>
-    <%= f.text_field :city, class: 'form-control' %>
+    <%= form_for @topic, html: {class: "contact-form"} do |f| %>
 
-    <%= f.label :address, "Address" %>
-    <%= f.text_field :address, class: 'form-control' %>
+        <%= f.text_field :name, id: 'name', class: 'form', required: 'required', placeholder: 'Topic title' %>
 
-    <%= f.submit "Add", class: "btn btn-primary" %>
-<% end %>
+        <%= f.text_field :country, id: 'country', class: 'form', required: 'required', placeholder: 'Country' %>
+
+        <%= f.text_field :city, id: 'city', class: 'form', required: 'required', placeholder: 'City' %>
+
+        <%= f.text_field :address, id: 'address', class: 'form', required: 'required', placeholder: 'Address' %>
+
+        <%= f.submit "Add", class: "form-btn" %>
+    <% end %>
+
+  </div>
+</div>
