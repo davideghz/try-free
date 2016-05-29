@@ -11,6 +11,10 @@ a {
   }
 }
 
+hr {
+  border-color: #222;
+}
+
 /* Navbar */
 
 #navbar {
@@ -259,12 +263,6 @@ body{
   color: white;
   outline: none;
   border:1px solid #8BC3A3;
-}
-
-.textarea{
-  height: 200px;
-  max-height: 200px;
-  max-width: 100%;
 }
 
 /* Send Button Styles */

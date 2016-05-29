@@ -6,8 +6,8 @@ class TopicsController < ApplicationController
     if current_user.topics.count != 0
       @topics = current_user.topics
     else
-      flash[:danger] = "You didn't create any Topic yet!"
-      redirect_to root_path
+      flash[:danger] = "You didn't create any Topic yet! Create one now!"
+      redirect_to new_topic_path
     end
   end
 
