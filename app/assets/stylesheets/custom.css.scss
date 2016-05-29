@@ -2,7 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* TYPOGRAPHY */
+/* GENERAL */
 
 a {
   text-decoration: none;
@@ -15,7 +15,12 @@ hr {
   border-color: #222;
 }
 
-/* Navbar */
+body{
+  overflow-x: hidden;
+  background-color: #eeeeee;
+}
+
+/* NAVBAR */
 
 #navbar {
   -webkit-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
@@ -28,12 +33,7 @@ hr {
   border-bottom: 4px solid;
 }
 
-/* Slidebar */
-
-body{
-  overflow-x: hidden;
-  background-color: #eeeeee;
-}
+/* SLIDEBAR */
 
 .slidebar-nav {
   left: 250px;
@@ -124,11 +124,9 @@ body{
 }
 
 @media (max-width: 767px) {
-
   .navbar-nav .open .dropdown-menu > li > a {
     padding: 25px;
   }
-
 }
 
 #wrapper {
@@ -269,10 +267,7 @@ body{
   background-color: #cccccc;
 }
 
-
 /* FORMS */
-
-/* Input Styles */
 
 .form{
   width: 100%;
@@ -295,8 +290,6 @@ body{
   outline: none;
   border:1px solid #8BC3A3;
 }
-
-/* Send Button Styles */
 
 .form-btn{
   width:180px;
@@ -329,13 +322,16 @@ body{
 
 .thumbnail {
   border-radius: 0px;
+  padding: 0px;
 }
 
+/*
 .card {
   -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
   -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
   box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
 }
+*/
 
 .card:hover {
   -webkit-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
