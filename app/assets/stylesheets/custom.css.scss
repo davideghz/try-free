@@ -71,6 +71,7 @@ body{
   float: none;
   display: block;
 }
+
 .slidebar-nav li a {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -120,6 +121,14 @@ body{
     font-size: 34px;
     margin-bottom: 6px;
   }
+}
+
+@media (max-width: 767px) {
+
+  .navbar-nav .open .dropdown-menu > li > a {
+    padding: 25px;
+  }
+
 }
 
 #wrapper {
