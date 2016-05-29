@@ -1,7 +1,9 @@
 class TopicsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
-    if user_signed_in?
+    if current_user.topics.count != 0
       @topics = current_user.topics
     else
       flash[:danger] = "You didn't create any Topic yet!"
@@ -14,7 +16,7 @@ class TopicsController < ApplicationController
   end
 
   def new
-    @topic = current_user.topics.build if current_user
+    @topic = current_user.topics.build
   end
 
   def edit
