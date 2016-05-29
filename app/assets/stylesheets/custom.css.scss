@@ -86,12 +86,8 @@ body{
   border: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+  background-color: #ff0000;
 }
-/*
-.slidebar-nav .open .dropdown-menu > li > a {
-  padding: 5px 15px 5px 25px;
-}
-*/
 .slidebar-nav .navbar-brand {
   width: 100%;
 }
@@ -103,24 +99,28 @@ body{
   margin: 0;
 }
 
-.dropmenu-item-btn {
+.navbar-nav > li > #slide-btn {
+  padding: 25px;
   text-align: center;
-
-  .dropdown-menu > li > & {
-    padding: 25px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: darken(#428bca, 6.5%);
-    }
-  }
-
   > .glyphicon {
     display: block;
     font-size: 34px;
     margin-bottom: 6px;
   }
+}
+
+.dropdown-toggle, .dropmenu-item-btn, .slidebar-nav .open .dropdown-menu > li > a {
+  padding: 25px;
+  text-align: center;
+  > .glyphicon {
+    display: block;
+    font-size: 34px;
+    margin-bottom: 6px;
+  }
+}
+
+.dd-slide {
+  padding: 25px;
 }
 
 @media (max-width: 767px) {
@@ -222,9 +222,7 @@ body{
 
 #navbar-white.navbar-default { /* #efffff - #ffffff */
   font-size: 14px;
-  background-color: rgba(255, 255, 255, 1);
-  background: -webkit-linear-gradient(top, rgba(239, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: linear-gradient(to bottom, rgba(239, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background-color: #000000;
   border: 0px;
   border-radius: 0;
 }
@@ -235,37 +233,13 @@ body{
 #navbar-white.navbar-default .navbar-nav>.active>a,
 #navbar-white.navbar-default .navbar-nav>.active>a:hover,
 #navbar-white.navbar-default .navbar-nav>.active>a:focus {
-  color: rgba(51, 51, 51, 1);
-  background-color: rgba(255, 255, 255, 1);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  color: #333;
+  background-color: #ffffff;
 }
 #sidebar-white, #column-white, #dashboard-white, #slidebar-white {
-  background-color: #efffff;
+  background-color: #000000;
 }
-#navbar-white.navbar-default .navbar-toggle,
-#navbar-white.navbar-default .slidebar-toggle {
-  border-color: #ccffff;
-}
-#navbar-white.navbar-default .navbar-toggle:hover,
-#navbar-white.navbar-default .navbar-toggle:focus,
-#navbar-white.navbar-default .slidebar-toggle:hover,
-#navbar-white.navbar-default .slidebar-toggle:focus {
-  background-color: #ccffff;
-}
-#navbar-white.navbar-default .navbar-nav>li>a,
-#navbar-white.navbar-default .navbar-nav>li>ul>li>a,
-#navbar-white.navbar-default .navbar-brand {
-  color: #999999;
-}
-#navbar-white.navbar-default .navbar-toggle .icon-bar,
-#navbar-white.navbar-default .navbar-toggle:hover .icon-bar,
-#navbar-white.navbar-default .navbar-toggle:focus .icon-bar,
-#navbar-white.navbar-default .slidebar-toggle .icon-bar,
-#navbar-white.navbar-default .slidebar-toggle:hover .icon-bar,
-#navbar-white.navbar-default .slidebar-toggle:focus .icon-bar {
-  background-color: #cccccc;
-}
+
 
 /* FORMS */
 
