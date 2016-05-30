@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20160528185720) do
 
-  create_table "appointments", force: :cascade do |t|
+  create_table "lessons", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "topic_id"
     t.datetime "lesson_date"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20160528185720) do
     t.datetime "updated_at",     null: false
   end
 
-  add_index "appointments", ["topic_id"], name: "index_appointments_on_topic_id"
-  add_index "appointments", ["user_id"], name: "index_appointments_on_user_id"
+  add_index "lessons", ["topic_id"], name: "index_lessons_on_topic_id"
+  add_index "lessons", ["user_id"], name: "index_lessons_on_user_id"
 
   create_table "topics", force: :cascade do |t|
     t.string   "title"
