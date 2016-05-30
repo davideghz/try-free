@@ -24,12 +24,10 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= current_user.email %> <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="/"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
-                <li><a href="/"><i class="glyphicon glyphicon-plus"></i> Account</a></li>
-                <li><a href="/"><i class="glyphicon glyphicon-cog"></i> Settings</a></li>
-                <li><a href="/"><i class="glyphicon glyphicon-comment"></i> Notifications</a></li>
+                <li><%= link_to('<i class="glyphicon glyphicon-edit"></i> Edit Profile'.html_safe, edit_user_registration_path, class: 'dropmenu-item-btn') %></li>
+                <li><%= link_to('<i class="glyphicon glyphicon-comment"></i> Notifications'.html_safe, '#', class: 'dropmenu-item-btn') %></li>
                 <li class="divider"></li>
-                <li><%= link_to 'Log Ud', destroy_user_session_path, method: 'delete' %>
+                <li><%= link_to('<i class="glyphicon glyphicon-log-out"></i> Log Out  '.html_safe, destroy_user_session_path, method: 'delete', class: 'dropmenu-item-btn') %>
                 </li>
               </ul>
             </li>

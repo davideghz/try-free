@@ -3,13 +3,13 @@
   <nav id="navbar-white" class="navbar navbar-default" role="navigation">
     <ul class="nav navbar-nav">
 
-      <li><%= link_to('<i class="glyphicon glyphicon-th-large"></i> Lessons'.html_safe, root_path, id: 'slide-btn') %></li>
+      <li><%= link_to('<i class="glyphicon glyphicon-map-marker"></i> Locations'.html_safe, '#{root_path}', id: 'slide-btn') %></li>
+      <li><%= link_to('<i class="glyphicon glyphicon-tags"></i> Categories'.html_safe, '#', id: 'slide-btn') %></li>
+      <li><%= link_to('<i class="glyphicon glyphicon-th-large"></i> All Lessons'.html_safe, root_path, id: 'slide-btn') %></li>
 
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" id="slide-btn" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> User menu <b class="caret"></b></a>
         <ul class="dropdown-menu">
-
-          <li><%= link_to('<i class="glyphicon glyphicon-edit"></i> Edit Profile'.html_safe, edit_user_registration_path, class: 'dropmenu-item-btn') %></li>
 
           <li><%= link_to('<i class="glyphicon glyphicon-plus"></i> Create new topic'.html_safe, new_topic_path, class: 'dropmenu-item-btn') %></li>
 
