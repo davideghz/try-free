@@ -1,7 +1,7 @@
 class CreateTopics < ActiveRecord::Migration
   def change
     create_table :topics do |t|
-      t.string :name
+      t.string :title
       t.string :country
       t.string :city
       t.string :address
