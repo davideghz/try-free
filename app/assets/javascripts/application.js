@@ -16,3 +16,13 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
+
+// Decrease char counter from 140 to 0 and prevent inserting more char in the text_field
+function countChar(val) {
+    var len = val.value.length;
+    if (len > 140) {
+        val.value = val.value.substring(0, 140);
+    } else {
+        $('#charNum').text(140 - len);
+    }
+}
