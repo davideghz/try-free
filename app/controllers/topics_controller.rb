@@ -1,32 +1,37 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+
+  before_action :authenticate_user!
 
   def index
-    @topics = Topic.all
+    if current_user.topics.count != 0
+      @topics = current_user.topics
+    else
+      flash[:danger] = "You didn't create any Topic yet! Create one now!"
+      redirect_to new_topic_path
+    end
   end
 
   def show
+    @topic = Topic.find(params[:id])
   end
 
   def new
-    @topic = Topic.new
+    @topic = current_user.topics.build
   end
 
   def edit
   end
 
   def create
-    @topic = Topics.new(topics_params)
-
-    respnd_to do |format|
-      if @topic.save
-        format.html {redirect_to @topic, flash: "Topic was successfully created"}
-        format.json { render :show, status: :created, location: @topic}
-      else
-        format.html {render :new}
-        format.json {render json: @topic.errors, status: :unprocessable_entity }
-      end
+    @topic = current_user.topics.build(topic_params)
+    if @topic.save
+      flash[:success] = "Topic created"
+      redirect_to topics_path
+    else
+      flash[:danger] = "Houston, we got a problem!"
+      redirect_to new_topic_path
     end
+
   end
 
   def update
@@ -51,11 +56,7 @@ class TopicsController < ApplicationController
 
   private
 
-  def set_topic
-    @topic = Topic.find(params[:id])
-  end
-
-  def topics_params
-    params.require(:topic).permit()
+  def topic_params
+    params.require(:topic).permit(:name, :country, :city, :address)
   end
 end

@@ -1,11 +1,12 @@
 class CreateLessons < ActiveRecord::Migration
   def change
-    create_table :lessons do |t|
-      t.date :date
-      t.reference :user, index: true, foreign_key: true
-      t.integer :topic_id
 
+    create_table :appointments do |t|
+      t.belongs_to :user, index: true
+      t.belongs_to :topic, index: true
+      t.datetime :lesson_date
       t.timestamps null: false
     end
+
   end
 end

@@ -1,0 +1,381 @@
+/* The following 2 imports are required by bootstrap-sass gem */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* GENERAL */
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+hr {
+  border-color: #222;
+}
+
+body{
+  overflow-x: hidden;
+  background-color: #eeeeee;
+}
+
+.alert {
+  border-radius: 0px;
+  -webkit-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+}
+
+/* NAVBAR */
+
+#navbar {
+  -webkit-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+}
+
+.navbar-nav .open > a > b.caret {
+  border-top: none;
+  border-bottom: 4px solid;
+}
+
+/* hide dropdown header on small screens and show submenus directly */
+@media (max-width: 767px) {
+  .navbar-nav .dropdown-menu-hide {
+    display: block;
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .dropdown-toggle-hide {
+    display: none !important;
+  }
+  .navbar-inverse .navbar-nav .dropdown-menu-hide > li > a {
+    color: #9d9d9d;
+  }
+}
+
+/* SLIDEBAR */
+
+.slidebar-nav {
+  left: 250px;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  margin-left: -250px;
+  overflow-y: auto;
+  padding: 0;
+  padding-top: 25px;
+  position: fixed;
+  top: 50px;
+  width: 0;
+  z-index: 1000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled .slidebar-nav {
+  width: 250px;
+}
+.slidebar-nav .navbar-collapse {
+  padding: 0;
+  max-height: none;
+}
+.slidebar-nav ul {
+  float: none;
+  width: 100%;
+}
+.slidebar-nav ul:not {
+  display: block;
+}
+.slidebar-nav li {
+  float: none;
+  display: block;
+}
+
+.slidebar-nav li a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.slidebar-nav .open .dropdown-menu {
+  position: static;
+  float: none;
+  width: auto;
+  margin: 0;
+  padding: 5px 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #ff0000;
+}
+.slidebar-nav .navbar-brand {
+  width: 100%;
+}
+.slidebar-nav .open > a > b.caret {
+  border-top: none;
+  border-bottom: 4px solid;
+}
+.slidebar-nav .navbar-nav {
+  margin: 0;
+}
+
+.navbar-nav > li > #slide-btn {
+  padding: 25px;
+  text-align: center;
+  > .glyphicon {
+    display: block;
+    font-size: 34px;
+    margin-bottom: 6px;
+  }
+}
+
+.dropdown-toggle, .dropmenu-item-btn, .slidebar-nav .open .dropdown-menu > li > a {
+  padding: 25px;
+  text-align: center;
+  > .glyphicon {
+    display: block;
+    font-size: 34px;
+    margin-bottom: 6px;
+  }
+}
+
+.dd-slide {
+  padding: 25px;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu > li > a {
+    padding: 25px;
+  }
+}
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled {
+  padding-left: 250px;
+}
+#page-wrapper6 {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  padding-top: 60px;
+}
+#wrapper.toggled #page-wrapper6 {
+  position: absolute;
+  margin-right: -250px;
+}
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+  #page-wrapper6 {
+    padding: 20px;
+    padding-top: 60px;
+    position: relative;
+  }
+  #wrapper.toggled #page-wrapper6 {
+    position: relative;
+    margin-right: 0;
+  }
+  .slidebar-nav {
+    width: 250px;;
+  }
+  #wrapper.toggled .slidebar-nav {
+    width: 0;
+  }
+}
+
+.slidebar-toggle {
+  position: relative;
+  float: left;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-left: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.slidebar-toggle:focus {
+  outline: 0;
+}
+.slidebar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+.slidebar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+.navbar-inverse .slidebar-toggle {
+  border-color: #333;
+}
+.navbar-inverse .slidebar-toggle:hover,
+.navbar-inverse .slidebar-toggle:focus {
+  background-color: #333;
+}
+.navbar-inverse .slidebar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-default .slidebar-toggle {
+  border-color: #ddd;
+}
+.navbar-default .slidebar-toggle:hover,
+.navbar-default .slidebar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-default .slidebar-toggle .icon-bar {
+  background-color: #888;
+}
+
+/* White navbar style */
+
+#navbar-white.navbar-default { /* #efffff - #ffffff */
+  font-size: 14px;
+  background-color: #000000;
+  border: 0px;
+  border-radius: 0;
+}
+#navbar-white.navbar-default .navbar-nav>li>a:hover,
+#navbar-white.navbar-default .navbar-nav>li>a:focus,
+#navbar-white.navbar-default .navbar-nav>li>ul>li>a:hover,
+#navbar-white.navbar-default .navbar-nav>li>ul>li>a:focus,
+#navbar-white.navbar-default .navbar-nav>.active>a,
+#navbar-white.navbar-default .navbar-nav>.active>a:hover,
+#navbar-white.navbar-default .navbar-nav>.active>a:focus {
+  color: #333;
+  background-color: #ffffff;
+}
+#sidebar-white, #column-white, #dashboard-white, #slidebar-white {
+  background-color: #000000;
+}
+
+
+/* FORMS */
+
+.form{
+  width: 100%;
+  padding: 15px;
+  background:#f8f8f8;
+  border:1px solid rgba(0, 0, 0, 0.075);
+  margin-bottom:25px;
+  color:#727272 !important;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.form:hover{
+  border:1px solid #8BC3A3;
+}
+
+.form:focus{
+  color: white;
+  outline: none;
+  border:1px solid #8BC3A3;
+}
+
+.form-btn{
+  width:180px;
+  display: block;
+  height: auto;
+  padding:15px;
+  color:#fff;
+  background:#8BC3A3;
+  border:none;
+  border-radius:3px;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin:auto;
+  -webkit-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+}
+
+.form-btn:hover{
+  opacity: 0.8;
+}
+
+.form-btn:active{
+  opacity: 1;
+}
+
+/* CARDS */
+
+.thumbnail {
+  border-radius: 0px;
+  padding: 0px;
+}
+
+/*
+.card {
+  -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+*/
+
+.card:hover {
+  -webkit-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+  box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
+
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+}
+
+.title {
+  padding-top: 1px;
+  padding-bottom: 5px;
+  background: #000000;
+  opacity: 0.3;
+  margin: 0 auto;
+  margin-top: -62px;
+  text-align:center;
+  position: relative;
+  color: #ffffff;
+}
+
+.card-meta {
+  border-top: 1px solid #e6e6e6;
+}
+
+.element{
+  width: 100%;
+  background:#f8f8f8;
+  border:1px solid rgba(0, 0, 0, 0.075);
+  color:#727272 !important;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.element:hover{
+  border:1px solid #8BC3A3;
+}
+
+.element:focus{
+  outline: none;
+  border:1px solid #8BC3A3;
+}

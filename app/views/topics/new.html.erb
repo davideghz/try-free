@@ -1,2 +1,20 @@
-<h1>Topics#new</h1>
-<p>Find me in app/views/topics/new.html.erb</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <h1>Create Topic</h1>
+
+    <%= form_for @topic, html: {class: "contact-form"} do |f| %>
+
+        <%= f.text_field :name, id: 'name', class: 'form', required: 'required', placeholder: 'Topic title' %>
+
+        <%= f.text_field :country, id: 'country', class: 'form', required: 'required', placeholder: 'Country' %>
+
+        <%= f.text_field :city, id: 'city', class: 'form', required: 'required', placeholder: 'City' %>
+
+        <%= f.text_field :address, id: 'address', class: 'form', required: 'required', placeholder: 'Address' %>
+
+        <%= f.submit "Add", class: "form-btn" %>
+    <% end %>
+
+  </div>
+</div>

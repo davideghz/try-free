@@ -1,3 +1,9 @@
-<h1>Topics#index</h1>
-
-<%= render 'topics/topic' %>
+<div class="row">
+  <%= render @topics %>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <p><i class="glyphicon glyphicon-fire"></i> = number of people who joined any lesson of the topic</p>
+    <p><i class="glyphicon glyphicon-bookmark"></i> = number of lessons of the topic</p>
+  </div>
+</div>
