@@ -22,8 +22,8 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= current_user.email %> <b class="caret"></b></a>
-              <ul class="dropdown-menu">
+              <a href="#" class="dropdown-toggle dropdown-toggle-hide" data-toggle="dropdown"> <%= current_user.email %> <b class="caret"></b></a>
+              <ul class="dropdown-menu dropdown-menu-hide">
                 <li><%= link_to('<i class="glyphicon glyphicon-edit"></i> Edit Profile'.html_safe, edit_user_registration_path, class: 'dropmenu-item-btn') %></li>
                 <li><%= link_to('<i class="glyphicon glyphicon-comment"></i> Notifications'.html_safe, '#', class: 'dropmenu-item-btn') %></li>
                 <li class="divider"></li>

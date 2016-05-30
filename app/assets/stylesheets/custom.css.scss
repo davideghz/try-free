@@ -35,7 +35,7 @@ body{
 
 /* hide dropdown header on small screens and show submenus directly */
 @media (max-width: 767px) {
-  .navbar-nav .dropdown-menu {
+  .navbar-nav .dropdown-menu-hide {
     display: block;
     position: static;
     float: none;
@@ -46,10 +46,10 @@ body{
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  .dropdown-toggle {
+  .dropdown-toggle-hide {
     display: none !important;
   }
-  .navbar-inverse .navbar-nav .dropdown-menu > li > a {
+  .navbar-inverse .navbar-nav .dropdown-menu-hide > li > a {
     color: #9d9d9d;
   }
 }
