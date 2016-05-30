@@ -13,21 +13,27 @@
 
 ActiveRecord::Schema.define(version: 20160528185720) do
 
-  create_table "lessons", force: :cascade do |t|
-    t.date     "date"
+  create_table "appointments", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "topic_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "topics", force: :cascade do |t|
-    t.string   "name"
+    t.datetime "lesson_date"
     t.string   "country"
     t.string   "city"
     t.string   "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "lesson_img_url"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "appointments", ["topic_id"], name: "index_appointments_on_topic_id"
+  add_index "appointments", ["user_id"], name: "index_appointments_on_user_id"
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "title"
+    t.string   "excerpt"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
   end
 
