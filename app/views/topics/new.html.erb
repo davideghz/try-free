@@ -7,7 +7,8 @@
 
         <%= f.text_field :title, id: 'title', class: 'form', required: 'required', placeholder: 'Topic title' %>
 
-        <%= f.text_field :excerpt, id: 'excerpt', class: 'form', required: 'required', placeholder: 'Brief summary (max 140 char)' %>
+        <div id="charNum">140</div>
+        <%= f.text_area :excerpt, id: 'excerpt', class: 'form', onkeyup: 'countChar(this)', required: 'required', placeholder: 'Brief summary (max 140 char)' %>
 
         <%= f.text_area :description, id: 'description', class: 'form', required: 'required', placeholder: 'Long description' %>
 
@@ -16,3 +17,14 @@
 
   </div>
 </div>
+
+<script>
+  function countChar(val) {
+    var len = val.value.length;
+    if (len > 140) {
+      val.value = val.value.substring(0, 140);
+    } else {
+      $('#charNum').text(140 - len);
+    }
+  };
+</script>
