@@ -5,11 +5,11 @@
 
     <%= form_for @topic, html: {class: "contact-form"} do |f| %>
 
-        <%= f.text_field :name, id: 'name', class: 'form', required: 'required', placeholder: 'Topic title' %>
+        <%= f.text_field :title, id: 'title', class: 'form', required: 'required', placeholder: 'Topic title' %>
 
         <%= f.text_field :excerpt, id: 'excerpt', class: 'form', required: 'required', placeholder: 'Brief summary (max 140 char)' %>
 
-        <%= f.textarea :description, id: 'description', class: 'form', required: 'required', placeholder: 'Long description' %>
+        <%= f.text_area :description, id: 'description', class: 'form', required: 'required', placeholder: 'Long description' %>
 
         <%= f.submit "Add", class: "form-btn" %>
     <% end %>
