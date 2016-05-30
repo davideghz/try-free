@@ -327,6 +327,12 @@ body{
 .thumbnail {
   border-radius: 0px;
   padding: 0px;
+  > img {
+    vertical-align: middle;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
 }
 
 /*
@@ -362,6 +368,10 @@ body{
 .card-meta {
   border-top: 1px solid #e6e6e6;
 }
+
+
+
+/* TOPICS */
 
 .element{
   width: 100%;
