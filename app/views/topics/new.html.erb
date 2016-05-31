@@ -3,7 +3,7 @@
 
     <h1>Create Topic</h1>
 
-    <%= form_for @topic, html: {class: "contact-form"} do |f| %>
+    <%= form_for @topic do |f| %>
 
         <%= f.text_field :title, id: 'title', class: 'form', required: 'required', placeholder: 'Topic title' %>
 

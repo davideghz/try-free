@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <h1>Create Lesson</h1>
+
+    <%= form_for([@topic, @lesson]) do |f| %>
+
+      <%= f.date_field :lesson_date, id: 'lesson_date', class: 'form', required: 'required' %>
+
+      <%= f.text_field :country, id: 'country', class: 'form', required: 'required', placeholder: 'Country' %>
+      <%= f.text_field :city, id: 'city', class: 'form', required: 'required', placeholder: 'City' %>
+      <%= f.text_field :address, id: 'address', class: 'form', required: 'required', placeholder: 'Address' %>
+
+      <%= f.submit "Add", class: "form-btn" %>
+    <% end %>
+
+  </div>
+</div>

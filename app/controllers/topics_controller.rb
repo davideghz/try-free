@@ -1,6 +1,7 @@
 class TopicsController < ApplicationController
 
   before_action :authenticate_user!
+  before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   def index
     if current_user.topics.count != 0
@@ -13,13 +14,11 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
+    @lessons = @topic.lessons
   end
 
   def new
     @topic = current_user.topics.build
-  end
-
-  def edit
   end
 
   def create
@@ -31,27 +30,25 @@ class TopicsController < ApplicationController
       flash[:danger] = "Houston, we got a problem!"
       redirect_to new_topic_path
     end
+  end
 
+  def edit
   end
 
   def update
-    respond_to do |format|
-      if @topic.update(topic_params)
-        format.html { redirect_to @topic, notice: 'Topic was successfully updated.' }
-        format.json { render :show, status: :ok, location: @topic }
-      else
-        format.html { render :edit }
-        format.json { render json: @topic.errors, status: :unprocessable_entity }
-      end
+    # @topic is already defined in correct_user which is called before_action
+    if @topic.update_attributes(topic_params)
+      flash[:success] = "Topic updated"
+      redirect_to @topic
+    else
+      render 'edit'
     end
   end
 
   def destroy
     @topic.destroy
-    respond_to do |format|
-      format.html { redirect_to topics_url, notice: 'Topic was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:success] = "Topic deleted"
+    redirect_to topics_path
   end
 
   private
@@ -59,4 +56,13 @@ class TopicsController < ApplicationController
   def topic_params
     params.require(:topic).permit(:title, :excerpt, :description)
   end
+
+  def correct_user
+    @topic = current_user.topics.find_by(id: params[:id])
+    if @topic.nil?
+      flash[:danger] = "You can't access this topic!"
+      redirect_to root_url
+    end
+  end
+
 end
