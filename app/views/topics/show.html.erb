@@ -38,13 +38,17 @@
 
   </div>
 
-  <div class="col-xs-12 col-sm-4 col-md-6">
+  <div class="col-xs-12 col-sm-4 col-md-6 align-left">
 
     <h3><strong>List of lessons:</strong></h3>
 
-    <div class="row">
-      <%= render @lessons %>
-    </div> <!-- row -->
+    <% if @topic.lessons.any? %>
+      <div class="row">
+        <%= render @lessons %>
+      </div> <!-- row -->
+    <% else %>
+      <p>You do not have any lesson scheduled yet! Add your first lesson!</p>
+    <% end %>
 
     <%= button_to "New occurrency", new_topic_lesson_path(@topic), method: :get, class: 'form-btn' %>
 

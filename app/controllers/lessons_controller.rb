@@ -15,9 +15,10 @@ class LessonsController < ApplicationController
   def create
     @topic = current_user.topics.find(params[:topic_id])
     @lesson = @topic.lessons.build(lesson_params)
+    @lesson.user_id = current_user.id
     if @lesson.save
       flash[:success] = "Lesson created"
-      redirect_to topics_path
+      redirect_to @topic
     else
       flash[:danger] = "Houston, we got a problem!"
       redirect_to new_lesson_path
