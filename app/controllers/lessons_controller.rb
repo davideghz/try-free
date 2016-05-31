@@ -21,7 +21,7 @@ class LessonsController < ApplicationController
       redirect_to @topic
     else
       flash[:danger] = "Houston, we got a problem!"
-      redirect_to new_lesson_path
+      redirect_to new_topic_lesson_path
     end
   end
 
@@ -47,7 +47,7 @@ class LessonsController < ApplicationController
   private
 
   def lesson_params
-    params.require(:lesson).permit(:lesson_date, :country, :city, :address)
+    params.require(:lesson).permit(:lesson_date, :country, :city, :address, :picture)
   end
 
   def correct_user
