@@ -12,6 +12,8 @@
 
         <%= f.text_area :description, id: 'description', class: 'form', required: 'required', placeholder: 'Long description' %>
 
+        <%= f.file_field :picture, class: "form", accept: 'image/jpeg,image/gif,image/png'  %>
+
         <%= f.submit "Add", class: "form-btn" %>
     <% end %>
 
