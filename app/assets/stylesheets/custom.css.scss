@@ -380,6 +380,11 @@ body{
     position: relative;
     color: #ffffff;
   }
+  .thumbnail {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+;
 }
 
 @media (min-width: 767px) {
