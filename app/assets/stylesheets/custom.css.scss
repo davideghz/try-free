@@ -44,6 +44,11 @@ body{
   border-bottom: 4px solid;
 }
 
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+  height: 100vh;
+  max-height: 100vh;
+}
+
 /* hide dropdown header on small screens and show submenus directly */
 @media (max-width: 767px) {
   .navbar-nav .dropdown-menu-hide {
