@@ -1,5 +1,8 @@
 <%= link_to(topic) do %>
 <div class="thumbnail element">
+  <% if topic.picture? %>
+      <%= image_tag topic.picture.url %>
+  <% end %>
   <div class="caption">
     <h3><%= topic.title %></h3>
   </div>
@@ -8,88 +11,4 @@
     <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
   </div>
 </div>
-<% end %>
-
-<%= link_to(topic) do %>
-    <div class="thumbnail element">
-      <div class="caption">
-        <h3><%= topic.title %></h3>
-      </div>
-      <div class="caption card-meta">
-        <span><i class="glyphicon glyphicon-fire"></i> <%= rand(5..30) %></span>
-        <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
-      </div>
-    </div>
-<% end %>
-
-<%= link_to(topic) do %>
-    <div class="thumbnail element">
-      <div class="caption">
-        <h3><%= topic.title %></h3>
-      </div>
-      <div class="caption card-meta">
-        <span><i class="glyphicon glyphicon-fire"></i> <%= rand(5..30) %></span>
-        <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
-      </div>
-    </div>
-<% end %>
-
-<%= link_to(topic) do %>
-    <div class="thumbnail element">
-      <div class="caption">
-        <h3><%= topic.title %></h3>
-      </div>
-      <div class="caption card-meta">
-        <span><i class="glyphicon glyphicon-fire"></i> <%= rand(5..30) %></span>
-        <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
-      </div>
-    </div>
-<% end %>
-
-<%= link_to(topic) do %>
-    <div class="thumbnail element">
-      <div class="caption">
-        <h3><%= topic.title %></h3>
-      </div>
-      <div class="caption card-meta">
-        <span><i class="glyphicon glyphicon-fire"></i> <%= rand(5..30) %></span>
-        <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
-      </div>
-    </div>
-<% end %>
-
-<%= link_to(topic) do %>
-    <div class="thumbnail element">
-      <div class="caption">
-        <h3><%= topic.title %></h3>
-      </div>
-      <div class="caption card-meta">
-        <span><i class="glyphicon glyphicon-fire"></i> <%= rand(5..30) %></span>
-        <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
-      </div>
-    </div>
-<% end %>
-
-<%= link_to(topic) do %>
-    <div class="thumbnail element">
-      <div class="caption">
-        <h3><%= topic.title %></h3>
-      </div>
-      <div class="caption card-meta">
-        <span><i class="glyphicon glyphicon-fire"></i> <%= rand(5..30) %></span>
-        <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
-      </div>
-    </div>
-<% end %>
-
-<%= link_to(topic) do %>
-    <div class="thumbnail element">
-      <div class="caption">
-        <h3><%= topic.title %></h3>
-      </div>
-      <div class="caption card-meta">
-        <span><i class="glyphicon glyphicon-fire"></i> <%= rand(5..30) %></span>
-        <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
-      </div>
-    </div>
 <% end %>
