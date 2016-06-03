@@ -296,6 +296,16 @@ body{
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
+select{
+  padding: 15px;
+  background:#f8f8f8;
+  border:1px solid rgba(0, 0, 0, 0.075);
+  margin-bottom:25px;
+  color:#727272 !important;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
 .form:hover{
   border:1px solid #8BC3A3;
 }
@@ -331,7 +341,6 @@ body{
 .red {
   background: #c37860;
 }
-
 .blue {
   background: #86a6c3;
 }

@@ -7,13 +7,15 @@
 
       <%= f.hidden_field :user_id %>
 
-      <%= f.date_field :lesson_date, id: 'lesson_date', class: 'form', required: 'required' %>
+      <%= f.date_select :lesson_date, id: 'lesson_date', class: 'form', required: 'required' %>
+
+        <br>
+
+      <%= f.time_select :lesson_date, :ignore_date => true, id: 'lesson_date', class: 'form', required: 'required' %>
 
       <%= f.text_field :country, id: 'country', class: 'form', required: 'required', placeholder: 'Country' %>
       <%= f.text_field :city, id: 'city', class: 'form', required: 'required', placeholder: 'City' %>
       <%= f.text_field :address, id: 'address', class: 'form', required: 'required', placeholder: 'Address' %>
-
-
 
       <%= f.submit "Add", class: "form-btn" %>
     <% end %>
