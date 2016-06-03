@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
   def home
-    @available_lessons = Topic.joins(:lessons)
+    @available_lessons = Lesson.all.order(:lesson_date)
   end
 end

@@ -1,12 +1,12 @@
-<div class="col-xs-6 col-sm-6 col-md-4">
+<div class="col-xs-6 col-sm-6 col-md-3">
   <div class="thumbnail card">
-    <img src="http://www.kontrokultura.it/wp-content/uploads/2014/06/spiaggia-nissi-beach.jpg">
+    <%= image_tag available_lesson.topic.picture.url %>
     <div class="title">
-      <h3 class="hidden-xs">XXX</h3>
+      <h3 class="hidden-xs"><%= available_lesson.topic.title %></h3>
       <h5 class="visible-xs">XXX</h5>
     </div>
     <div class="caption">
-      ...
+      <%= available_lesson.lesson_date %>
     </div>
   </div>
 </div>
