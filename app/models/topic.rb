@@ -3,6 +3,8 @@ class Topic < ActiveRecord::Base
   has_many :lessons, dependent: :destroy, inverse_of: :topic
 
   validates :title,  presence: true, length: { maximum: 18 }
+  validates :excerpt,  presence: true, length: { maximum: 140 }
+  validates :description,  presence: true
   validates :picture,  presence: true
 
   validate  :picture_size

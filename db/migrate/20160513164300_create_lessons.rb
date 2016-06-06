@@ -8,7 +8,6 @@ class CreateLessons < ActiveRecord::Migration
       t.string :country
       t.string :city
       t.string :address
-      t.string :lesson_img_url
       t.timestamps null: false
     end
 

@@ -5,6 +5,8 @@
 
     <%= form_for([@topic, @lesson], html: { multipart: true }) do |f| %>
 
+      <%= render 'shared/error_messages', object: f.object %>
+
       <%= f.hidden_field :user_id %>
 
       <%= f.date_select :lesson_date, id: 'lesson_date', class: 'form', required: 'required' %>

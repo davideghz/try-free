@@ -20,9 +20,8 @@ ActiveRecord::Schema.define(version: 20160531233506) do
     t.string   "country"
     t.string   "city"
     t.string   "address"
-    t.string   "lesson_img_url"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "lessons", ["topic_id"], name: "index_lessons_on_topic_id"
