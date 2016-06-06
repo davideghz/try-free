@@ -2,6 +2,9 @@ class Topic < ActiveRecord::Base
   belongs_to :user
   has_many :lessons, dependent: :destroy, inverse_of: :topic
 
+  validates :title,  presence: true, length: { maximum: 18 }
+  validates :picture,  presence: true
+
   validate  :picture_size
 
   mount_uploader :picture, PictureUploader

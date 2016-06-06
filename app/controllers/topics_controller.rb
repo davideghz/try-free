@@ -28,7 +28,7 @@ class TopicsController < ApplicationController
       redirect_to topics_path
     else
       flash[:danger] = "Houston, we got a problem!"
-      redirect_to new_topic_path
+      render 'new'
     end
   end
 
