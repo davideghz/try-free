@@ -1,14 +1,10 @@
 class LessonsController < ApplicationController
 
   before_action :authenticate_user!
-  # before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def show
     @lesson = Lesson.find(params[:id])
-    respond_to do |format|
-      format.html {}
-      format.js
-    end
   end
 
   def new
@@ -56,8 +52,8 @@ class LessonsController < ApplicationController
 
   def correct_user
     @lesson = current_user.lessons.find_by(id: params[:id])
-    if lesson.nil?
-      flash[:danger] = "You can't access this topic!"
+    if @lesson.nil?
+      flash[:danger] = "You can't access this lesson!"
       redirect_to root_url
     end
   end

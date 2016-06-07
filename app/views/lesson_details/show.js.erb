@@ -1,5 +1,5 @@
 // Add the dialog title
-$('#dialog h4').html("<i class='glyphicon glyphicon-info-sign'></i> Lesson of: <%= @lesson.topic.title %>");
+$('#dialog h4').html("<i class='glyphicon glyphicon-info-sign'></i> Lesson of: <%= @lesson_detail.topic.title %>");
 
 // Render the partial
 $('.modal-body').html('<%= j render("lesson_info") %>');

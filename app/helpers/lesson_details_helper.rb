@@ -1,0 +1,2 @@
+module LessonDetailsHelper
+end
