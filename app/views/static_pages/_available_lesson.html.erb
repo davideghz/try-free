@@ -1,12 +1,16 @@
-<div class="col-xs-6 col-sm-6 col-md-3">
-  <div class="thumbnail card">
-    <%= image_tag available_lesson.topic.picture.url %>
-    <div class="title">
-      <h3 class="hidden-xs"><%= available_lesson.topic.title %></h3>
-      <h5 class="visible-xs"><%= available_lesson.topic.title %></h5>
-    </div>
-    <div class="caption">
-      <%= available_lesson.lesson_date.strftime("%A, %d %B") %> - <%= available_lesson.lesson_date.strftime("%H:%M") %>
+<%= link_to available_lesson, remote: true do %>
+
+  <div class="col-xs-6 col-sm-6 col-md-3">
+    <div class="thumbnail card">
+      <%= image_tag available_lesson.topic.picture.url %>
+      <div class="title">
+        <h3 class="hidden-xs"><%= available_lesson.topic.title %></h3>
+        <h5 class="visible-xs"><%= available_lesson.topic.title %></h5>
+      </div>
+      <div class="caption">
+        <%= available_lesson.lesson_date.strftime("%A, %d %B") %> - <%= available_lesson.lesson_date.strftime("%H:%M") %>
+      </div>
     </div>
   </div>
-</div>
+
+<% end %>
