@@ -6,6 +6,7 @@
     <h1>Simple homepage</h1>
     <p>Switch locale (top right in navbar) to translate the following text:</p>
     <h1><%= t('hello') %></h1>
+    <%= render 'filter' %>
   </div>
 
   <%= render partial: "available_lesson", collection: @available_lessons %>
