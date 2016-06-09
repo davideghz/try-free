@@ -6,9 +6,9 @@ gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
 
 # Images upload
-gem 'carrierwave',             '0.10.0'
-gem 'mini_magick',             '3.8.0'
-
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

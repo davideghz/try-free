@@ -50,3 +50,6 @@
 /test/controllers/test_controllers_controller_test.rb
 /test/fixtures/test_controllers.yml
 /test/models/test_controller_test.rb
+
+# Ignore uploaded test images.
+/public/uploads
