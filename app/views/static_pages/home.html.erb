@@ -1,14 +1,9 @@
-<%= render 'dialog' %>
-
 <div class="row">
-
-  <div class="col-xs-12 col-sm-6 col-md-3" id="test">
-    <h1>Simple homepage</h1>
-    <p>Switch locale (top right in navbar) to translate the following text:</p>
-    <h1><%= t('hello') %></h1>
-    <%= render 'filter' %>
+  <div class="col-sm-12 hidden-md hidden-lg center">
+    <%= link_to("Apply filters", filters_show_path, remote: true) %>
+    <br><br>
   </div>
-
+</div>
+<div class="row">
   <%= render partial: "available_lesson", collection: @available_lessons %>
-
 </div>

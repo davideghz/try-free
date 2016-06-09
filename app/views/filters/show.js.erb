@@ -1,0 +1,8 @@
+// Add the dialog title
+$('#dialog h4').html("<i class='glyphicon glyphicon-info-sign'></i> Filters:");
+
+// Render the partial
+$('.modal-body').html('<%= j render("filter")%>');
+
+// Show the dynamic dialog
+$('#dialog').modal("show");

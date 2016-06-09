@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'filters/show'
+
   scope "(:locale)" do
     root 'static_pages#home'
 

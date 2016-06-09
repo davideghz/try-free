@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= form_tag root_path, method: :get do %>
+        <div class="btn-group btn-group-justified filter" data-toggle="buttons">
+          <label class="btn btn-default filter-el">
+            <%= radio_button_tag(:country, "Italy") %> Italy
+          </label>
+          <label class="btn btn-default filter-el">
+            <%= radio_button_tag(:country, "Germany") %> Germany
+          </label>
+          <label class="btn btn-default filter-el">
+            <%= radio_button_tag(:country, "Denmark") %> Denmark
+          </label>
+        </div>
+        <%= text_field_tag :contains, "", class: 'form', placeholder: 'Lesson name ...' %>
+        <%= submit_tag 'Filter', name: nil, class: 'form-btn' %>
+    <% end %>
+  </div>
+</div>

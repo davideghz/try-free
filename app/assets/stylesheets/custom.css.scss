@@ -10,16 +10,16 @@ a {
     text-decoration: none;
   }
 }
-
 hr {
   border-color: #222;
 }
-
 body{
   overflow-x: hidden;
   background-color: #eeeeee;
 }
-
+.center {
+  text-align: center;
+}
 .alert {
   border-radius: 0px;
   -webkit-box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.5);
@@ -37,9 +37,25 @@ body{
   // background-color: #ff0000;
   // color: #fff;
 }
-
 .modal-content{
   border-radius: 0px;
+}
+
+/* FILTER */
+
+.filter {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.filter-el {
+  width: 90px;
+  padding: 15px;
+  background:#f8f8f8;
+  border:1px solid rgba(0, 0, 0, 0.075);
+  color:#727272 !important;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 /* NAVBAR */
