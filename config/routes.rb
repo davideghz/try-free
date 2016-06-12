@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     root 'static_pages#home'
 
     resources :lesson_details, only: [:show]
+    resources :user_lessons, only: [:create, :destroy]
 
     resources :topics, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
       resources :lessons, only: [:index, :show, :new, :create]
