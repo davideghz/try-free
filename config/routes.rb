@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'user_lessons/create'
+
+  get 'user_lessons/destroy'
+
   get 'filters/show'
 
   scope "(:locale)" do
