@@ -6,12 +6,9 @@ class UserLessonsController < ApplicationController
   end
 
   def destroy
-  end
-
-  private
-
-  def user_lesson_params
-    params.require(:user_lesson).permit(:user_id, :lesson_id)
+    lesson = UserLesson.find(params[:id])
+    current_user.unsubscribe(lesson)
+    redirect_to root_path
   end
 
 end
