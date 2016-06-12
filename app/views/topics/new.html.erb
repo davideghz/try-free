@@ -9,10 +9,13 @@
 
         <%= f.text_field :title, id: 'title', class: 'form', required: 'required', placeholder: 'Topic title' %>
 
-        <div id="charNum">140</div>
-        <%= f.text_area :excerpt, id: 'excerpt', class: 'form', onkeyup: 'countChar(this)', required: 'required', placeholder: 'Brief summary (max 140 char)' %>
+        <%= f.select :category, [['Sport', 'Sport'], ['Dance and Music', 'Dance and Music']], id: 'category', required: 'required' %>
 
-        <%= f.text_area :description, id: 'description', class: 'form', required: 'required', placeholder: 'Long description' %>
+        <%= f.label :excerpt, "140", id: :excerpt  %>
+        <%= f.text_area :excerpt, id: 'excerpt', class: 'form', onkeyup: 'countChar(this, 140)', required: 'required', placeholder: 'Brief summary (max 140 char)' %>
+
+        <%= f.label :description, "500", id: :description  %>
+        <%= f.text_area :description, id: 'description', class: 'form', onkeyup: 'countChar(this, 500)', required: 'required', placeholder: 'Long description (max 500 char)' %>
 
         <%= f.file_field :picture, class: "form", accept: 'image/jpeg,image/gif,image/png'  %>
 

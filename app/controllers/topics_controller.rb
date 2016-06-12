@@ -54,7 +54,7 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:title, :excerpt, :description, :picture)
+    params.require(:topic).permit(:title, :excerpt, :description, :picture, :category)
   end
 
   def correct_user

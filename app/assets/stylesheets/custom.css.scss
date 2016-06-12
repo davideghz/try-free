@@ -333,6 +333,12 @@ select{
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
+.new_topic select{
+  width: 100%;
+}
+.new_lesson #lesson_seats {
+  width: 100%;
+}
 .form:hover{
   border:1px solid #8BC3A3;
 }
@@ -417,7 +423,7 @@ select{
     position: relative;
     color: #ffffff;
   }
-  .thumbnail {
+  .home-thumb {
     margin-left: -8px;
     margin-right: -8px;
   }
@@ -441,7 +447,10 @@ select{
 .card-meta {
   border-top: 1px solid #e6e6e6;
 }
-
+.right {
+  display: block;
+  float:right;
+}
 
 /* TOPICS */
 

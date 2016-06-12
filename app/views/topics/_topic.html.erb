@@ -1,14 +1,17 @@
-<%= link_to(topic) do %>
-<div class="thumbnail element">
-  <% if topic.picture? %>
-      <%= image_tag topic.picture.url %>
+<div class="col-xs-12 col-sm-6 col-md-4">
+  <%= link_to(topic) do %>
+  <div class="thumbnail element">
+    <% if topic.picture? %>
+        <%= image_tag topic.picture.url %>
+    <% end %>
+    <div class="caption">
+      <h3><%= topic.title %></h3>
+    </div>
+    <div class="caption card-meta">
+      <span><i class="glyphicon glyphicon-user"></i> <%= rand(5..30) %></span>
+      <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
+      <span class="right"><i class="glyphicon glyphicon-tag"></i> <%= topic.category %></span>
+    </div>
+  </div>
   <% end %>
-  <div class="caption">
-    <h3><%= topic.title %></h3>
-  </div>
-  <div class="caption card-meta">
-    <span><i class="glyphicon glyphicon-fire"></i> <%= rand(5..30) %></span>
-    <span><i class="glyphicon glyphicon-bookmark"></i> <%= rand(5..30) %></span>
-  </div>
 </div>
-<% end %>
