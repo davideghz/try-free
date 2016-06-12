@@ -1,7 +1,7 @@
 <%= link_to lesson_detail_path(available_lesson), remote: true do %>
 
   <div class="col-xs-6 col-sm-6 col-md-3">
-    <div class="thumbnail card">
+    <div class="thumbnail card home-thumb">
       <%= image_tag available_lesson.topic.picture.url %>
       <div class="title">
         <h3 class="hidden-xs"><%= available_lesson.topic.title %></h3>
