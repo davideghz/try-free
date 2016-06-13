@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   # Unfollows a user.
   def unsubscribe(lesson)
-    user_lessons.find_by(lesson_id: lesson.id).destroy
+    user_lessons.find_by(id: lesson.id).destroy
   end
 
   # Returns true if the current user is subscribed to the lesson.
