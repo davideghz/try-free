@@ -1,14 +1,22 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
+
+# user auth made easy
 gem 'devise'
+
+# support for sassy bootstrap
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
+
+# fake contents for seed
+gem 'faker'
 
 # Images upload
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

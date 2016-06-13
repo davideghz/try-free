@@ -29,11 +29,15 @@
 
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
-    <% if current_user.subscribed?(@lesson_detail) %>
+    <% if !current_user %>
+      <%= content_tag :div, class: "alert alert-danger" do %>
+        <%= link_to("Log In to subscribe.", new_user_session_path) %>
+      <% end %>
+    <% elsif current_user.subscribed?(@lesson_detail) %>
       <%= content_tag :div, class: "alert alert-info" do %>
         <%= form_for(current_user.user_lessons.find_by(lesson_id: @lesson_detail.id), html: { method: :delete }) do |f| %>
-                You are subscribed to this lesson.
-            <%= f.submit "Unsubscribe", class: "btn btn-danger" %>
+          You are subscribed to this lesson.
+          <%= f.submit "Unsubscribe", class: "btn btn-danger" %>
         <% end %>
       <% end %>
     <% else %>
