@@ -1,6 +1,7 @@
 class Topic < ActiveRecord::Base
   belongs_to :user
   has_many :lessons, dependent: :destroy, inverse_of: :topic
+  has_many :subscribed_users, through: :lessons
 
   validates :title,  presence: true, length: { maximum: 18 }
   validates :excerpt,  presence: true, length: { maximum: 140 }
