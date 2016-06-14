@@ -1,7 +1,7 @@
-User.delete_all
-Topic.delete_all
-Lesson.delete_all
 UserLesson.delete_all
+Lesson.delete_all
+Topic.delete_all
+User.delete_all
 
 # Users
 user = User.new(email: "davideghz@gmail.com",
