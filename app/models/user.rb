@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :user_lessons, dependent: :destroy
   has_many :subscribed_lessons, through: :user_lessons, source: :lesson
 
+  has_one :profile, dependent: :destroy
+
   # Subscribe to a lesson.
   def subscribe(lesson)
     user_lessons.create(lesson_id: lesson.id)
