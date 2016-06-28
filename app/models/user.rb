@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  after_create :build_profile
+
   has_many :topics
   has_many :lessons, through: :topics
   has_many :user_lessons, dependent: :destroy
@@ -24,6 +26,12 @@ class User < ActiveRecord::Base
   # Returns true if the current user is subscribed to the lesson.
   def subscribed?(lesson)
     subscribed_lessons.include?(lesson)
+  end
+
+  private
+
+  def build_profile
+    Profile.create(user: self)
   end
 
 end
