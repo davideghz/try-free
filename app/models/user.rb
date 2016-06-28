@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  after_create :build_profile
 
   has_many :topics
   has_many :lessons, through: :topics
@@ -12,6 +11,8 @@ class User < ActiveRecord::Base
   has_many :subscribed_lessons, through: :user_lessons, source: :lesson
 
   has_one :profile, dependent: :destroy
+  # This after filter is Rails magic, default method from creating has_one relationship
+  after_create :build_profile
 
   # Subscribe to a lesson.
   def subscribe(lesson)
@@ -26,12 +27,6 @@ class User < ActiveRecord::Base
   # Returns true if the current user is subscribed to the lesson.
   def subscribed?(lesson)
     subscribed_lessons.include?(lesson)
-  end
-
-  private
-
-  def build_profile
-    Profile.create(user: self)
   end
 
 end
