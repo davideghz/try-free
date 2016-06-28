@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
   has_many :topics
   has_many :lessons, through: :topics
   has_many :user_lessons, dependent: :destroy
