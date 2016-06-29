@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   has_many :subscribed_lessons, through: :user_lessons, source: :lesson
 
   has_one :profile, dependent: :destroy
+  # This after filter is Rails magic, default method from creating has_one relationship
+  after_create :create_profile
 
   # Subscribe to a lesson.
   def subscribe(lesson)
