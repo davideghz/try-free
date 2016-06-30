@@ -17,7 +17,10 @@ Rails.application.routes.draw do
     end
 
     devise_for :users
-    resources :profile, only: [:show, :edit]
+
+    devise_scope :users do
+      resources :profiles, only: [:show, :edit]
+    end
   end
 
 
