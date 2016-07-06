@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  You are now editing profile id: <%= @profile.first_name || @profile.user_id %>
+  <br>
+
+  <%= form_for(@profile) do |f| %>
+  	<%= f.text_field :first_name, class: 'form', placeholder: 'Your first name' %> 
+
+  	<%= f.text_field :last_name, class: 'form', placeholder: 'Your last name' %> 
+
+  	<%= f.file_field :profile_picture, class: "form", accept: 'image/jpeg,image/gif,image/png'  %>
+  	<%= f.check_box :remove_profile_picture %>
+  	Remove profile picture?
+
+  	<%= f.submit "Save profile", class: 'form-btn' %>
+
+	<% end %>
+  </div>
+</div>

@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     devise_for :users
 
     devise_scope :users do
-      resources :profiles, only: [:show, :edit]
+      resources :profiles, except: [:index]
     end
   end
 

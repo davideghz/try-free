@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-	before_action :set_profile, only: [:show, :edit]
+	before_action :set_profile, only: [:show, :edit, :update]
 
 	def show
 		#
@@ -9,6 +9,15 @@ class ProfilesController < ApplicationController
 
 	end
 
+	def update
+		if @profile.update(profile_params)
+			flash[:success] =  "Succesfully updated your profile"
+			redirect_to @profile
+			else
+				render :new
+			end
+	end
+
 	private
 
 	def set_profile
@@ -16,6 +25,6 @@ class ProfilesController < ApplicationController
 	end
 
 	def profile_params
-		params.require(:profile).permit(:first_name, :last_name, :age, :bio, :location)
+		params.require(:profile).permit(:first_name, :last_name, :age, :bio, :location, :profile_picture)
 	end
 end
