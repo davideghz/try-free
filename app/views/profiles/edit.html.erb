@@ -8,6 +8,8 @@
 
   	<%= f.text_field :last_name, class: 'form', placeholder: 'Your last name' %> 
 
+  	<%= f.file_field :profile_picture, class: "form", accept: 'image/jpeg,image/gif,image/png'  %>
+
   	<%= f.submit "Save profile", class: 'form-btn' %>
 
 	<% end %>
