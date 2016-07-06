@@ -10,15 +10,12 @@ class ProfilesController < ApplicationController
 	end
 
 	def update
-		respond_to do |format|
-			if @profile.update(profile_params)
-				format.html { redirect_to @profile, flash: "Succesfully updated your profile"}
-				format.json { render :show, status: :created, location: @profile}
+		if @profile.update(profile_params)
+			flash[:success] =  "Succesfully updated your profile"
+			redirect_to @profile
 			else
-				format.html { render :new }
-				format.json { render json: @profile.errors, status: :unprocessable_entity }
+				render :new
 			end
-		end
 	end
 
 	private
