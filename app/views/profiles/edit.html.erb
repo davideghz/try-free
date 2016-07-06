@@ -9,6 +9,8 @@
   	<%= f.text_field :last_name, class: 'form', placeholder: 'Your last name' %> 
 
   	<%= f.file_field :profile_picture, class: "form", accept: 'image/jpeg,image/gif,image/png'  %>
+  	<%= f.check_box :remove_profile_picture %>
+  	Remove profile picture?
 
   	<%= f.submit "Save profile", class: 'form-btn' %>
 
